@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Atualizar Tipos de Eventos</h2>
+<form action="Update" method="post" class="form-horizontal">
+
+    <div class="form-horizontal">
+        <h4>Tipo de Eventos</h4>
+        <hr />
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Id:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="idTipoEvento" value="@Model.idTipoEvento" readonly />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Descrição:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="descricaoTipoEvento" value="@Model.descricaoTipoEvento" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Porcentagem:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="number" name="perc" value="@Model.perc" />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tipo:</label>
+
+
+            <select class="form-control" name="tipo.id">
+                <option value="value">Selecione um Tipo</option>
+
+
+                @foreach (Aplicacao_Modelos.Tipo item in ViewBag.tipo)
+                {
+                    <option value="@item.id">@item.tipo</option>
+                }
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="~/TipoEvento/index" class="btn btn-primary">Voltar</a>
+   
+</div>
+
+
+

@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Alunos</h2>
+
+
+<table>
+    <thead>
+        <tr>
+            <th><a href="../aluno/create" class="btn btn-primary">Novo Aluno</a></th>
+            <th><a href="../../TipoEvento/index" class="btn btn-primary">Tipos de Eventos</a></th>
+        </tr>
+    </thead>
+</table>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CGU</th>
+            <th>Nome</th>
+            <th>Data Nascimento</th>
+            <th>Curso</th>
+            <th>
+
+                Alterar | Deletar | Evento
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.cgu</td>
+                <td>@item.nome</td>
+                <td>@item.dataNasc.ToString("dd/MM/yyyy")</td>
+                <td>@item.curso</td>
+                <td>
+                    <a href="../Aluno/Update/@item.cgu" class="btn btn-primary">Alterar</a>
+                    <a href="../Aluno/Excluir/@item.cgu" class="btn btn-danger">Delete</a>
+                    <a href="../Evento/index/@item.cgu" class="btn btn-primary">Eventos</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

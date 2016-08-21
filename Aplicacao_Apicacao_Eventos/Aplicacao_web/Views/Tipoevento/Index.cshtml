@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<h2>Tipos de Eventos</h2>
+<br />
+<a href="../TipoEvento/create" class="btn btn-success">Novo Tipo Evento</a>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Descrição</th>
+            <th>Porcentual</th>
+
+            <th>
+
+                Alterar | Deletar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.idTipoEvento</td>
+                <td>@item.descricaoTipoEvento</td>
+                <td>@item.perc</td>
+
+
+                <td>
+                    <a href="../TipoEvento/Update/@item.idTipoEvento" class="btn btn-primary">Alterar</a>
+                    <a href="../TipoEvento/Excluir/@item.idTipoEvento" class="btn btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a href="~/aluno/index" class="btn btn-primary">Voltar</a>
+</div>
+
+
+
+

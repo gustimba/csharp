@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cadastrar Aluno</h2>
+<form action="Create" method="post" class="form-horizontal">
+
+    <div class="form-horizontal">
+        <h4>Aluno
+        </h4>
+        <hr />
+
+        <div class="form-group">
+            <label class="control-label col-md-2">CGU:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="number" name="cgu" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Nome:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="nome" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Data Nascimento:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="date" name="dataNasc" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Curso:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="curso" value="STATDS" readonly />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="~/aluno/index" class="btn btn-primary">Voltar</a>
+</div>
+

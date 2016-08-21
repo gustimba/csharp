@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<h2>Eventos do aluno @ViewBag.aluno.nome</h2>
+
+
+<table>
+    <thead>
+        <tr>
+            <th><a href="../create/@ViewBag.cgu" class="btn btn-primary">Novo Evento</a></th>
+            <th><a href="../../TipoEvento/index" class="btn btn-primary">Tipos de Eventos</a></th>
+
+            <th>Horas totais: @ViewBag.horas:@ViewBag.minutos   </th>
+            <th>Horas necessárias: 36:00</th>
+
+        </tr>
+    </thead>
+</table>
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tipo Evento</th>
+            <th>Descrição </th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>Data do Cadastro</th>
+            <th>Horas</th>
+            <th>Porcentual</th>
+
+            <th>
+
+
+                Alterar | Deletar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.descricaoTipoEvento</td>
+                <td>@item.descricaoEvento</td>
+                <td>@item.localEvento</td>
+                <td>@item.dataEvento.ToString("dd/MM/yyyy")</td>
+                <td>@item.dataCadastro.ToString("dd/MM/yyyy")</td>
+                <td>@item.numeroHoras</td>
+                <td>@item.perc</td>
+                <td>
+                    <a href="../Update/@item.idEvento" class="btn btn-primary">Alterar</a>
+                    <a href="../Excluir/@item.idEvento" class="btn btn-danger">Excluir</a>
+
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a href="~/aluno/index" class="btn btn-primary">Voltar</a>
+</div>
+
+
+

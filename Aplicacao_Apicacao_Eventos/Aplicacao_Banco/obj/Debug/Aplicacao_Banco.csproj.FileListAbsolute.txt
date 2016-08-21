@@ -1,0 +1,6 @@
+C:\Users\Gustimba\SkyDrive\ulbra 2016 1\linguagem de programação comercial\Aplicacao_Apicacao_Eventos\Aplicacao_Banco\bin\Debug\Aplicacao_Banco.dll
+C:\Users\Gustimba\SkyDrive\ulbra 2016 1\linguagem de programação comercial\Aplicacao_Apicacao_Eventos\Aplicacao_Banco\bin\Debug\Aplicacao_Banco.pdb
+C:\Users\Gustimba\SkyDrive\ulbra 2016 1\linguagem de programação comercial\Aplicacao_Apicacao_Eventos\Aplicacao_Banco\bin\Debug\MySql.Data.dll
+C:\Users\Gustimba\SkyDrive\ulbra 2016 1\linguagem de programação comercial\Aplicacao_Apicacao_Eventos\Aplicacao_Banco\obj\Debug\Aplicacao_Banco.csprojResolveAssemblyReference.cache
+C:\Users\Gustimba\SkyDrive\ulbra 2016 1\linguagem de programação comercial\Aplicacao_Apicacao_Eventos\Aplicacao_Banco\obj\Debug\Aplicacao_Banco.dll
+C:\Users\Gustimba\SkyDrive\ulbra 2016 1\linguagem de programação comercial\Aplicacao_Apicacao_Eventos\Aplicacao_Banco\obj\Debug\Aplicacao_Banco.pdb

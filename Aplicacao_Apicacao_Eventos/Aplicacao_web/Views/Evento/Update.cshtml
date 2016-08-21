@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Atualizar</h2>
+<form action="Update" method="post" class="form-horizontal">
+
+    <div class="form-horizontal">
+        <h4>Eventos</h4>
+        <hr />
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Id:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="idEvento" value="@ViewBag.id" readonly />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tipo:</label>
+
+
+            <select class="form-control" name="idTabelaHora">
+                
+                    <option  value="value">Selecione um tipo</option>
+
+
+                    @foreach (Aplicacao_Modelos.TipoEvento item in ViewBag.tipo)
+                    {
+                        <option value="@item.idTipoEvento">@item.descricaoTipoEvento</option>
+                    }
+                    
+            </select>
+        
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Descriçao do evento:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="descricaoEvento" value="@Model.descricaoEvento" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Local do Evento:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="text" name="localEvento" value="@Model.localEvento" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Data do Evento:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="date" name="dataEvento" value="@Model.dataEvento.ToString("yyyy-MM-dd")" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Horas:</label>
+            <div class="col-md-10">
+                <input class="form-control" type="number" name="numeroHoras" value="@Model.numeroHoras" />
+            </div>
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="../aluno/index" class="btn btn-primary">Voltar</a>
+</div>
+
+
+
